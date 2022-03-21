@@ -5,6 +5,14 @@ class CategoriesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return GridView(
+      children: [],
+      gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+        maxCrossAxisExtent: 200,
+        childAspectRatio: 1.50,
+        mainAxisSpacing: 20.0,
+        crossAxisSpacing: 20.0,
+      ),
+    );
   }
 }
