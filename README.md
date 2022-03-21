@@ -1,4 +1,4 @@
-# CooKingKong is a Recipe App that will deal with many interesting features
+# CooKingKong is a Recipe App that will deal with many interesting Flutter features 
 
 ## I share my learning experience on Flutter, Dart, and Algorithm in - [https://sanjibsinha.com](https://sanjibsinha.com)
 
