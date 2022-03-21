@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'category.dart';
 
+// this is first-step
 const dummyCategories = [
   Category(id: 'c1', title: 'American', color: Colors.red),
   Category(id: 'c2', title: 'Mexican', color: Colors.green),
