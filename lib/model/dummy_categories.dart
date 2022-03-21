@@ -12,5 +12,5 @@ const dummyCategories = [
   Category(id: 'c7', title: 'Indian', color: Colors.pink),
   Category(id: 'c8', title: 'Iranian', color: Colors.black12),
   Category(id: 'c9', title: 'German', color: Colors.purple),
-  Category(id: 'c10', title: 'English', color: Colors.red),
+  Category(id: 'c10', title: 'Italian', color: Colors.red),
 ];
