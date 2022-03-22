@@ -14,7 +14,7 @@ class CategoriesPage extends StatelessWidget {
           )
           .toList(),
       gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-        maxCrossAxisExtent: 200,
+        maxCrossAxisExtent: 300,
         childAspectRatio: 1.50,
         mainAxisSpacing: 20.0,
         crossAxisSpacing: 20.0,
