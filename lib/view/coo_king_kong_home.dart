@@ -9,7 +9,10 @@ class CooKingKongHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('CooKingKong Recipe'),
+        title: const Text(
+          'CooKingKong Recipe',
+          //style: Theme.of(context).textTheme.titleMedium,
+        ),
       ),
       body: const CategoriesPage(),
     );
