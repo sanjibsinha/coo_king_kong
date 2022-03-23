@@ -1,3 +1,4 @@
+import 'package:coo_king_kong/view/individual_category_page.dart';
 import 'package:flutter/material.dart';
 
 import 'coo_king_kong_home.dart';
@@ -6,40 +7,65 @@ class CooKingKongApp extends StatelessWidget {
   const CooKingKongApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
+
+  /// If only [routes] is given, it must include an entry for the
+  ///[Navigator.defaultRouteName] (/), since that is the route used
+  ///when the application is launched with an intent that specifies
+  ///an otherwise unsupported route.
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        canvasColor: const Color.fromRGBO(255, 254, 229, 1),
-        fontFamily: 'Raleway',
-        textTheme: ThemeData.light().textTheme.copyWith(
-              bodySmall: const TextStyle(
-                color: Color.fromRGBO(20, 51, 51, 1),
-              ),
-              bodyMedium: const TextStyle(
-                color: Color.fromRGBO(20, 51, 51, 1),
-              ),
-              titleSmall: const TextStyle(
-                fontSize: 20,
-                fontFamily: 'RobotoCondensed',
-                fontWeight: FontWeight.bold,
-              ),
-              titleMedium: const TextStyle(
-                fontSize: 30,
-                fontFamily: 'RobotoCondensed',
-                fontWeight: FontWeight.bold,
-              ),
-              titleLarge: const TextStyle(
-                fontSize: 40,
-                fontFamily: 'RobotoCondensed',
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.pink)
-            .copyWith(secondary: Colors.amber),
-      ),
+      theme: useCustomTheme(),
       home: const CooKingKongHome(),
+
+      /// this will throw error
+      /* routes: {
+        '/individual-category-page': ((context) =>
+            IndividualCategoryPage(id: id, title: title, color: color))
+      }, */
+      /// we can make it even better
+      /* routes: {
+        '/individual-category-page': (context) =>
+            const IndividualCategoryPage(),
+      }, */
+      routes: {
+        IndividualCategoryPage.routeName: (context) =>
+            const IndividualCategoryPage(),
+      },
+    );
+  }
+
+  ThemeData useCustomTheme() {
+    return ThemeData(
+      canvasColor: const Color.fromRGBO(255, 254, 229, 1),
+      fontFamily: 'Raleway',
+      textTheme: ThemeData.light().textTheme.copyWith(
+            bodySmall: const TextStyle(
+              color: Color.fromRGBO(20, 51, 51, 1),
+            ),
+            bodyMedium: const TextStyle(
+              color: Color.fromRGBO(20, 51, 51, 1),
+            ),
+            titleSmall: const TextStyle(
+              fontSize: 20,
+              fontFamily: 'RobotoCondensed',
+              fontWeight: FontWeight.bold,
+            ),
+            titleMedium: const TextStyle(
+              fontSize: 30,
+              fontFamily: 'RobotoCondensed',
+              fontWeight: FontWeight.bold,
+            ),
+            titleLarge: const TextStyle(
+              fontSize: 40,
+              fontFamily: 'RobotoCondensed',
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+      colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.pink)
+          .copyWith(secondary: Colors.amber),
     );
   }
 }
