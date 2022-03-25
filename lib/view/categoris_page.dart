@@ -1,5 +1,5 @@
 import 'package:coo_king_kong/model/dummy_categories.dart';
-import 'package:coo_king_kong/view/category_item.dart';
+import 'package:coo_king_kong/controller/category_item.dart';
 import 'package:flutter/material.dart';
 
 class CategoriesPage extends StatelessWidget {

@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'individual_category_page.dart';
-
-/// TODO: this page displays each category by name and color
-/// we will add a method that will take us to individual
-/// category page
-
 class CategoryItem extends StatelessWidget {
   const CategoryItem({
     Key? key,
