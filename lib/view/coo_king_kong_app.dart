@@ -1,4 +1,5 @@
 import 'package:coo_king_kong/view/individual_category_page.dart';
+import 'package:coo_king_kong/view/individual_food_page.dart';
 import 'package:flutter/material.dart';
 
 import 'coo_king_kong_home.dart';
@@ -19,20 +20,10 @@ class CooKingKongApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: useCustomTheme(),
       home: const CooKingKongHome(),
-
-      /// this will throw error
-      /* routes: {
-        '/individual-category-page': ((context) =>
-            IndividualCategoryPage(id: id, title: title, color: color))
-      }, */
-      /// we can make it even better
-      /* routes: {
-        '/individual-category-page': (context) =>
-            const IndividualCategoryPage(),
-      }, */
       routes: {
         IndividualCategoryPage.routeName: (context) =>
             const IndividualCategoryPage(),
+        IndiividualFoodPage.routeName: (context) => const IndiividualFoodPage(),
       },
     );
   }

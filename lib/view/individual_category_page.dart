@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../controller/food_item.dart';
 import '../model/dummy_foods.dart';
 
 class IndividualCategoryPage extends StatelessWidget {
@@ -15,7 +16,6 @@ class IndividualCategoryPage extends StatelessWidget {
         ModalRoute.of(context)!.settings.arguments as Map<String, Object>;
     final id = routeArguments['id'];
     final Object? title = routeArguments['title'];
-    final Color? color = routeArguments['color'] as Color;
     final categoryMeals = dummyLorenIpsumLorenIpsumFood.where((food) {
       return food.categoryID.contains(id);
     }).toList();
@@ -26,13 +26,12 @@ class IndividualCategoryPage extends StatelessWidget {
       ),
       body: ListView.builder(
         itemBuilder: (ctx, index) {
-          return Container(
-            padding: const EdgeInsets.all(18.0),
-            color: color,
-            child: Text(
-              categoryMeals[index].title,
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
+          return FoodItem(
+            id: categoryMeals[index].id,
+            title: categoryMeals[index].title,
+            imageUrl: categoryMeals[index].imageUrl,
+            duration: categoryMeals[index].duration,
+            complexity: categoryMeals[index].complexity,
           );
         },
         itemCount: categoryMeals.length,
