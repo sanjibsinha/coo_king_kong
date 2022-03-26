@@ -10,7 +10,7 @@ const dummyLorenIpsumLorenIpsumFood = [
         'https://cdn.pixabay.com/photo/2016/08/11/08/04/vegetables-1584999_960_720.jpg',
     duration: 20,
     ingredients: [
-      '1 Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      '1 DolorSan sit amet, consectetur adipiscing elit',
       '1 Lorem ipsum dolor sit amet',
       '1 Lorem ipsum dol',
       '250g Lorem ipsum dolor',
