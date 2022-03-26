@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../model/dummy_foods.dart';
 
+///Displaying the individual food page
+///
 class IndiividualFoodPage extends StatelessWidget {
   const IndiividualFoodPage({Key? key}) : super(key: key);
   static const routeName = '/food-detail';
