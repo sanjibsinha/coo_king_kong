@@ -6,7 +6,7 @@ class IndiividualFoodPage extends StatelessWidget {
   const IndiividualFoodPage({Key? key}) : super(key: key);
   static const routeName = '/food-detail';
 
-  Widget buildSectionTitle(BuildContext context, String text) {
+  Widget displayTitle(BuildContext context, String text) {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 10),
       child: Text(
@@ -16,7 +16,7 @@ class IndiividualFoodPage extends StatelessWidget {
     );
   }
 
-  Widget buildContainer(Widget child) {
+  Widget displayContent(Widget child) {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
@@ -52,8 +52,8 @@ class IndiividualFoodPage extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-            buildSectionTitle(context, 'Ingredients'),
-            buildContainer(
+            displayTitle(context, 'Ingredients'),
+            displayContent(
               ListView.builder(
                 itemBuilder: (ctx, index) => Card(
                   color: Theme.of(context).colorScheme.secondary,
@@ -67,8 +67,8 @@ class IndiividualFoodPage extends StatelessWidget {
                 itemCount: selectedMeal.ingredients.length,
               ),
             ),
-            buildSectionTitle(context, 'Steps'),
-            buildContainer(
+            displayTitle(context, 'Steps'),
+            displayContent(
               ListView.builder(
                 itemBuilder: (ctx, index) => Column(
                   children: [
