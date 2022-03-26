@@ -1,5 +1,6 @@
 import 'package:coo_king_kong/view/individual_category_page.dart';
 import 'package:coo_king_kong/view/individual_food_page.dart';
+import 'package:coo_king_kong/view/individual_seller_page.dart';
 import 'package:flutter/material.dart';
 
 import 'coo_king_kong_home.dart';
@@ -19,11 +20,23 @@ class CooKingKongApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: useCustomTheme(),
-      home: const CooKingKongHome(),
+      //home: const CooKingKongHome(),
+      initialRoute: '/',
       routes: {
+        '/': (context) => const CooKingKongHome(),
         IndividualCategoryPage.routeName: (context) =>
             const IndividualCategoryPage(),
         IndiividualFoodPage.routeName: (context) => const IndiividualFoodPage(),
+      },
+      onGenerateRoute: (settings) {
+        return MaterialPageRoute(
+          builder: (ctx) => const CooKingKongHome(),
+        );
+      },
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(
+          builder: (ctx) => const IndividualSellerPage(),
+        );
       },
     );
   }
