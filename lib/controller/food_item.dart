@@ -33,7 +33,7 @@ class FoodItem extends StatelessWidget {
   void selectMeal(BuildContext context) {
     Navigator.of(context).pushNamed(
       IndiividualFoodPage.routeName,
-      arguments: title,
+      arguments: id,
     );
   }
 
