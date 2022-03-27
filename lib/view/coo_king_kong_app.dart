@@ -28,16 +28,6 @@ class CooKingKongApp extends StatelessWidget {
             const IndividualCategoryPage(),
         IndiividualFoodPage.routeName: (context) => const IndiividualFoodPage(),
       },
-      onGenerateRoute: (settings) {
-        return MaterialPageRoute(
-          builder: (ctx) => const CooKingKongHome(),
-        );
-      },
-      onUnknownRoute: (settings) {
-        return MaterialPageRoute(
-          builder: (ctx) => const IndividualSellerPage(),
-        );
-      },
     );
   }
 
