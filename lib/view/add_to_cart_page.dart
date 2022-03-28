@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 
-class IndividualSellerPage extends StatelessWidget {
-  const IndividualSellerPage({Key? key}) : super(key: key);
-  static const routeName = '/individual-seller';
+class AddToCartPage extends StatelessWidget {
+  const AddToCartPage({Key? key}) : super(key: key);
+  static const routeName = '/cart-page';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Individual Seller page',
+          'Your Cart',
         ),
       ),
       body: Center(
         child: Container(
           margin: const EdgeInsets.all(10.0),
           child: Text(
-            'Individual Seller page',
+            'Individual Cart page',
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.headline2,
           ),

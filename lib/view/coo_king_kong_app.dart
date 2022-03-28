@@ -1,9 +1,9 @@
-import 'package:coo_king_kong/view/individual_category_page.dart';
-import 'package:coo_king_kong/view/individual_food_page.dart';
-import 'package:coo_king_kong/view/individual_seller_page.dart';
 import 'package:flutter/material.dart';
 
 import 'coo_king_kong_home.dart';
+import 'individual_category_page.dart';
+import 'individual_food_page.dart';
+import 'individual_seller_page.dart';
 
 class CooKingKongApp extends StatelessWidget {
   const CooKingKongApp({Key? key}) : super(key: key);
@@ -14,8 +14,6 @@ class CooKingKongApp extends StatelessWidget {
   ///[Navigator.defaultRouteName] (/), since that is the route used
   ///when the application is launched with an intent that specifies
   ///an otherwise unsupported route.
-  ///
-  ///Going to call it a day: final step
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +28,7 @@ class CooKingKongApp extends StatelessWidget {
             const IndividualCategoryPage(),
         IndiividualFoodPage.routeName: (context) => const IndiividualFoodPage(),
       },
-      onGenerateRoute: (settings) {
+      /* onGenerateRoute: (settings) {
         return MaterialPageRoute(
           builder: (ctx) => const CooKingKongHome(),
         );
@@ -39,7 +37,7 @@ class CooKingKongApp extends StatelessWidget {
         return MaterialPageRoute(
           builder: (ctx) => const IndividualSellerPage(),
         );
-      },
+      }, */
     );
   }
 
