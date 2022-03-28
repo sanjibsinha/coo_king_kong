@@ -1,3 +1,4 @@
+import 'package:coo_king_kong/view/add_to_cart_page.dart';
 import 'package:flutter/material.dart';
 
 import '../model/food.dart';
@@ -126,12 +127,40 @@ class FoodItem extends StatelessWidget {
                             ),
                           );
                         },
-                        child: const Icon(
-                          Icons.manage_search_rounded,
+                        child: Row(
+                          children: const [
+                            Icon(Icons.add_call),
+                            SizedBox(
+                              width: 6,
+                            ),
+                            Text('Order'),
+                          ],
                         ),
                       ),
-                      const SizedBox(
-                        width: 6,
+                    ],
+                  ),
+                  Row(
+                    children: <Widget>[
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const AddToCartPage(),
+                            ),
+                          );
+                        },
+                        child: Row(
+                          children: const [
+                            Icon(
+                              Icons.add_shopping_cart,
+                            ),
+                            SizedBox(
+                              width: 6,
+                            ),
+                            Text('Cart'),
+                          ],
+                        ),
                       ),
                     ],
                   ),
